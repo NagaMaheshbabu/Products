@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Bikes Page</title>
+    <style>
+      .button-container {
+        display: inline; /* or inline-block, depending on your styling preferences */
+      }
+
+      .button-container button {
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #8c8383;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      ul {
+        list-style: none;
+      }
+      li {
+        padding: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Here is the data present in MongoDB</h3>
+    <a href="/AddBike">Add Bike</a>
+    <ul>
+      <h3>List of bikes</h3>
+      <% for (let bike of bikes) { %>
+      <li>
+        <a href="./bike/<%=bike.id %>"><%= bike.name %></a>
+        <div class="button-container">
+          <button onclick="window.location='/bike/<%=bike.id%>/Edit'">
+            Edit
+          </button>
+          <button onclick="window.location='/bike/<%=bike.id%>/delete'">
+            Delete
+          </button>
+        </div>
+      </li>
+
+      <% } %>
+    </ul>
+  </body>
+</html>

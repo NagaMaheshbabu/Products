@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Bike</title>
+    <style>
+      input {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/AddBike" method="post">
+      <label for="name">Enter Name :</label>
+      <input type="text" required name="name" placeholder="Enter bike name" />
+      <br />
+      <label for="price">Enter price :</label>
+      <input
+        type="number"
+        name="price"
+        placeholder="Enter bike price in rupees"
+        min="0"
+      />
+      <br />
+      <label for="color">Enter color :</label>
+      <input type="type" name="color" placeholder="enter bike color" />
+      <br />
+      <label>choose one :</label>
+      <input type="radio" name="stock" id="stock" value="true" /><label for="stock"
+        >stock</label
+      >
+      <input type="radio" name="stock" id="Out of stock" value="false" /><label
+        for="Out of stock"
+        >Out of stock</label
+      >
+      <br />
+      <button>submit</button>
+    </form>
+  </body>
+</html>
